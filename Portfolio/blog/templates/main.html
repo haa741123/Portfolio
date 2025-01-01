@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAMIN LEE</title>
+    <style>
+      @font-face {
+        font-family: "Eulyoo1945";
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src: url("./fonts/Eulyoo1945-Regular.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Pretendard";
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src: url("./fonts/Pretendard-Bold.otf") format("opentype");
+      }
+
+      body {
+        font-family: "Eulyoo1945", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d7d9d9;
+      }
+
+      .header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        background-color: #fff;
+      }
+
+      .header a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .header a:hover {
+        text-decoration: none;
+      }
+
+      .main {
+        display: flex;
+        align-items: flex-end;
+        margin: 100px;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+
+      .photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: url("./static/profile.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      h1 {
+        font-family: Pretendard, sans-serif;
+        font-size: 2.5em;
+        margin: 0 0 10px 0;
+      }
+
+      h2 {
+        font-family: Pretendard, sans-serif;
+        font-size: 1.2em;
+        margin: 0;
+        color: #666;
+      }
+      .description {
+        display: flex;
+        align-items: flex-end;
+        margin: 100px;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </header>
+    <div class="main">
+      <div class="photo"></div>
+      <div class="info">
+        <h1>HAMIN LEE</h1>
+        <h2>Tech University of Korea - AI Software</h2>
+      </div>
+    </div>
+    <div class="description">
+      <div class="info">
+        <h1>Welcome</h1>
+        <h2></h2>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hamin Lee</title>
+    <style>
+      /* 을유1945 웹폰트 설정 - otf 형식의 폰트를 불러옴 */
+      @font-face {
+        font-family: "Eulyoo1945";
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap; /* 폰트 로딩 중 시스템 폰트로 먼저 보여줌 */
+        src: url("./fonts/Eulyoo1945-Regular.otf") format("opentype");
+      }
+
+      /* 전체 페이지 세로 중앙 정렬 설정 */
+      body {
+        font-family: "Eulyoo1945", serif; /* 기본 폰트 설정, serif는 폴백 폰트 */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 가로 중앙 정렬 */
+        justify-content: center; /* 세로 중앙 정렬 */
+        height: 100vh; /* 뷰포트 전체 높이 사용 */
+        margin: 0;
+      }
+
+      /* 컨텐츠 전체 영역 가운데 정렬 */
+      .container {
+        text-align: center;
+      }
+
+      /* 제목 스타일 설정 */
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* 영문과 한글 사이 간격 */
+        font-size: 60px;
+        margin-bottom: 10px;
+      }
+
+      /* 모든 span 요소의 기본 상태 설정 */
+      .title span {
+        opacity: 0; /* 처음에는 투명하게 시작 */
+        transform: translateY(20px); /* 약간 아래에서 시작 */
+      }
+
+      /* 한글 텍스트 애니메이션 */
+      .ko {
+        animation: slideLeft 1s ease forwards; /* forwards로 마지막 상태 유지 */
+      }
+
+      /* 영문 텍스트 애니메이션 - 0.5초 딜레이 후 시작 */
+      .en {
+        animation: slideLeft 1s ease 0.5s forwards;
+      }
+
+      /* 우측에서 좌측으로 이동하는 애니메이션 정의 */
+      @keyframes slideLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(20px); /* 20px 아래에서 시작 */
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0); /* 원래 위치로 이동 */
+        }
+      }
+      /* 아래에서 위로 올라오는 애니메이션 정의 */
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px); /* 20px 아래에서 시작 */
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0); /* 원래 위치로 이동 */
+        }
+      }
+
+      /* 부제목 스타일 및 애니메이션 */
+      .subtitle {
+        margin-top: 20px;
+        font-size: 30px;
+        color: #000;
+        opacity: 0;
+        animation: slideUp 1s ease 1s forwards; /* 1초 딜레이 후 시작 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 전체 컨텐츠 컨테이너 -->
+    <div class="container">
+      <!-- 첫 번째 줄: Hello, 새로운 -->
+      <div class="title">
+        <span class="en">Hello,</span>
+        <span class="ko">새로운</span>
+      </div>
+      <!-- 두 번째 줄: World! 세상 -->
+      <div class="title">
+        <span class="en">World!</span>
+        <span class="ko">세상</span>
+      </div>
+      <!-- 부제목 -->
+      <div class="subtitle">
+        program for people
+      </div>
+      <div class="subtitle">
+        HAMIN LEE
+      </div>
+    </div>
+  </body>
+</html>
