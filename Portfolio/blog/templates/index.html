@@ -86,11 +86,20 @@
         opacity: 0;
         animation: slideUp 1s ease 1s forwards; /* 1초 딜레이 후 시작 */
       }
+
+      #page-container {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      #page-container.fade-out {
+        opacity: 0;
+      }
     </style>
   </head>
   <body>
     <!-- 전체 컨텐츠 컨테이너 -->
-    <div class="container">
+    <div class="container" id="page-container">
       <!-- 첫 번째 줄: Hello, 새로운 -->
       <div class="title">
         <span class="en">Hello,</span>
@@ -110,4 +119,16 @@
       </div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        const pageContainer = document.getElementById("page-container");
+        pageContainer.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = "./main.html";
+        }, 500);
+      }, 3000); // 3초 후 전환 (원하는 시간으로 조정 가능)
+    });
+  </script>
 </html>
